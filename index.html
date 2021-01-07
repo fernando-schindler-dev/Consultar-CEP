@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="container">
+    <header class="header">
       <form class="formulario">
-        <label for="cep">Digite o CEP desejado:</label>
-        <input type="number" name="cep" id="cep" class="cep" />
-        <input type="button" value="CONSULTAR" class="btnConsultar" />
+        <p class="label">Digite o CEP desejado:</p>
+        <div class="containerInputs">
+          <input type="number" name="cep" id="cep" class="cep" />
+          <input type="button" value="CONSULTAR" class="btnConsultar" />
+        </div>
       </form>
-      <output class="resultado"></output>
+    </header>
+
+    <section class="container">
+      <output class="resultado">O resultado foi...</output>
     </section>
 
-    <section class="autor">
-      <p>Feito por: <span>Fernando Schindler</span></p>
-    </section>
+    <footer class="footer">
+      <p class="autor">Feito por: <span>Fernando Schindler</span></p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
