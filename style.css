@@ -1,0 +1,104 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #aaa;
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+html {
+  font-size: 16px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background: #333;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 62.5rem;
+  height: 9.375rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background: #111;
+}
+.header .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .label {
+  align-self: flex-start;
+  margin: 0 0 0.25rem 0.75rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.1rem;
+}
+.header .containerInputs input[type="number"] {
+  width: 20rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: #222;
+}
+.header .containerInputs input[type="button"] {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background: darkcyan;
+  color: #fff;
+}
+.header .containerInputs input[type="button"]:hover {
+  filter: brightness(120%);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62.5rem;
+  height: 34.375rem;
+  margin: 3.125rem 0;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background: #111;
+}
+.container .resultado {
+  flex: 1;
+  margin: 2rem;
+  padding: 2rem;
+  font-size: 1.75rem;
+  border: 0.125rem solid #222;
+  border-radius: 0.75rem;
+}
+.footer {
+  flex: 1;
+  width: 62.5rem;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background: #111;
+}
+.footer .autor {
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #777;
+}
+.footer .autor span {
+  font-size: 1.75rem;
+  text-decoration: underline;
+  color: #777;
+}
