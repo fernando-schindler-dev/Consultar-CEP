@@ -28,7 +28,7 @@ body {
   height: 9.375rem;
   border-radius: 0 0 1rem 1rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background: #111;
+  background: #222;
 }
 .header .formulario {
   display: flex;
@@ -79,7 +79,7 @@ body {
   margin: 3.125rem 0;
   border-radius: 1rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background: #111;
+  background: #222;
 }
 .container .resultado {
   flex: 1;
@@ -106,7 +106,7 @@ body {
   text-align: center;
   border-radius: 1rem 1rem 0 0;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background: #111;
+  background: #222;
 }
 .footer .autor {
   padding: 2rem;
@@ -118,4 +118,50 @@ body {
   font-size: 1.75rem;
   text-decoration: underline;
   color: #777;
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 2250px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media (min-width: 2500px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 850px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 6px;
+  }
+}
+@media (max-width: 425px) {
+  html {
+    font-size: 4px;
+  }
 }
