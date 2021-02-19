@@ -4,9 +4,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #aaa;
-  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
   font-weight: bold;
+  color: #aaa;
 }
 html {
   font-size: 16px;
@@ -17,105 +17,194 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  margin: 0 3rem;
   background: #333;
+}
+.header,
+.container,
+.footer {
+  width: 100%;
+  max-width: 62.5rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background: #222;
 }
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 62.5rem;
-  height: 9.375rem;
   border-radius: 0 0 1rem 1rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background: #111;
 }
-.header .formulario {
+.header .form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 2rem;
 }
 .header .label {
-  align-self: flex-start;
-  margin: 0 0 0.25rem 0.75rem;
   font-size: 1.75rem;
   letter-spacing: -0.1rem;
 }
-.header .containerInputs input[type="number"] {
-  width: 20rem;
+.header .containerInputs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 45rem;
+}
+.header .containerInputs input {
+  margin: 0.5rem;
+}
+.header .containerInputs input[type='number'] {
+  flex: 2;
   padding: 0.5rem 0.75rem;
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
   border: none;
   border-radius: 0.75rem;
+  font-size: 1.5625rem;
+  letter-spacing: 0.2rem;
   background: #fff;
   color: #222;
 }
-.header .containerInputs input[type="number"].erro {
+.header .containerInputs input[type='number'].error {
   background: darkred;
   color: #fff;
   filter: brightness(0.75);
 }
-.header .containerInputs input[type="button"] {
+.header .containerInputs input[type='button'] {
   cursor: pointer;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  flex: 1;
+  padding: 0.5rem 1.59375rem;
   border: none;
   border-radius: 0.75rem;
+  font-size: 1.5625rem;
+  font-weight: bold;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   background: darkcyan;
   color: #fff;
 }
-.header .containerInputs input[type="button"]:hover {
+.header .containerInputs input[type='button']:hover {
   filter: brightness(120%);
 }
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 62.5rem;
-  height: 34.375rem;
-  margin: 3.125rem 0;
+  margin: 3rem 0;
   border-radius: 1rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background: #111;
 }
-.container .resultado {
+.container .result {
   flex: 1;
   display: grid;
   grid: auto / 1fr 2fr;
   align-items: center;
-  height: calc(100% - 4rem);
-  margin: 2rem;
-  padding: 2rem 5rem;
+  gap: 2.5rem 3rem;
+  max-width: 50rem;
+  min-height: 32.5rem;
+  margin: 3rem;
+  border-radius: 0.75rem;
   font-size: 1.75rem;
   line-height: 1;
   letter-spacing: -0.1rem;
-  border-radius: 0.75rem;
 }
-.container .resultado .erro {
+.container .result .error {
   grid-column: 1 / 3;
-  color: red;
   color: darkred;
   filter: brightness(1.5);
 }
 .footer {
   flex: 1;
-  width: 62.5rem;
   text-align: center;
   border-radius: 1rem 1rem 0 0;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background: #111;
 }
-.footer .autor {
+.footer .author {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 2rem;
-  font-size: 1.5rem;
   font-weight: bold;
   color: #777;
 }
-.footer .autor span {
+.footer .author p {
+  padding: 0 0.4375rem;
+}
+.footer .author p:nth-child(1) {
+  font-size: 1.5625rem;
+}
+.footer .author p:nth-child(2) {
   font-size: 1.75rem;
   text-decoration: underline;
-  color: #777;
+}
+
+@media (max-width: 45rem) {
+  body {
+    margin: 0 2rem;
+  }
+  .container {
+    margin: 2rem 0;
+  }
+  .header .form {
+    padding: 1.25rem;
+  }
+  .header .label {
+    font-size: 1.375rem;
+  }
+  .header .containerInputs input[type='number'] {
+    font-size: 1.375rem;
+  }
+  .header .containerInputs input[type='button'] {
+    font-size: 1.375rem;
+  }
+  .container .result {
+    gap: 1rem 1.25rem;
+    min-height: 25rem;
+    margin: 2rem;
+    font-size: 1.25rem;
+  }
+  .footer .author p:nth-child(1) {
+    font-size: 1.25rem;
+  }
+  .footer .author p:nth-child(2) {
+    font-size: 1.4375rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  body {
+    margin: 0 1rem;
+  }
+  .container {
+    margin: 1rem 0;
+  }
+  .header .form {
+    padding: 1.25rem;
+  }
+  .header .label {
+    font-size: 1.125rem;
+  }
+  .header .containerInputs input {
+    margin: 0.25rem;
+  }
+  .header .containerInputs input[type='number'] {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.125rem;
+  }
+  .header .containerInputs input[type='button'] {
+    padding: 0.25rem 1rem;
+    font-size: 1.125rem;
+  }
+  .container .result {
+    gap: 1rem 1.25rem;
+    min-height: 20rem;
+    margin: 1rem;
+    font-size: 1rem;
+  }
+  .footer .author {
+    padding: 1rem;
+  }
+  .footer .author p:nth-child(1) {
+    font-size: 1rem;
+  }
+  .footer .author p:nth-child(2) {
+    font-size: 1.125rem;
+  }
 }
