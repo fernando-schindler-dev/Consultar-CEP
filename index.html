@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultar CEP</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <form class="formulario">
-        <p class="label">Digite o CEP desejado:</p>
-        <div class="containerInputs">
-          <input type="number" name="cep" id="cep" class="cep" />
-          <input type="button" value="CONSULTAR" class="btn" />
-        </div>
-      </form>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultar CEP</title>
 
-    <section class="container">
-      <output class="resultado"></output>
-    </section>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <footer class="footer">
-      <p class="autor">Feito por: <span>Fernando Schindler</span></p>
-    </footer>
+<body>
+  <header class="header">
+    <form class="form">
+      <p class="label">Digite o CEP desejado:</p>
+      <div class="containerInputs">
+        <input type="number" name="cep" id="cep" class="cep" />
+        <input type="button" value="CONSULTAR" class="btn" />
+      </div>
+    </form>
+  </header>
 
-    <script src="./script.js"></script>
-  </body>
+  <section class="container">
+    <output class="result"></output>
+  </section>
+
+  <footer class="footer">
+    <div class="author">
+      <p>Feito por: </p>
+      <p>Fernando Schindler</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
